@@ -38,7 +38,7 @@ main = getArgs >>= \args -> case args of
          (rng2,fa) = chooseAssistance m cm rng1
        setStdGen rng2
        forM_ (M.toList fa) $ \(s,r) -> writeFile (s ++ ".txt") $
-         intercalate "\n" $ map (\(ss,rcp) -> conj ss ++ rcp) $ M.toList r
+         intercalate "\n\r" $ map (\(ss,rcp) -> conj ss ++ rcp) $ M.toList r
  where
   conj "You" = "You give to "
   conj n = n ++ " gives to "
