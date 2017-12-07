@@ -5,12 +5,13 @@ participants' names and by default outputs one text file per participant. Two
 types of annotation are supported.
 
 ## Example file:
-
-> John
-> Mickey: John
-> Elijah? John / Mary
-> Mary
-> Eve
+```
+John
+Mickey: John
+Elijah? John / Mary
+Mary
+Eve
+```
 
 In this example: Mickey has already jumped the gun and bought a gift for John.
 Elijah is blind and either John or Mary will inform him who he is giving to
