@@ -40,8 +40,8 @@ main = getArgs >>= \args -> case args of
        forM_ (M.toList fa) $ \(s,r) -> writeFile (s ++ ".txt") $
          intercalate "\n\r" $ map (\(ss,rcp) -> conj ss ++ rcp) $ M.toList r
  where
-  conj "You" = "You give to "
-  conj n = n ++ " gives to "
+  conj "You" = "You are giving to "
+  conj n = n ++ " is giving to "
 
 completeMatching :: RandomGen g => M.Map String Annotation -> g ->
   (g, M.Map String String)
